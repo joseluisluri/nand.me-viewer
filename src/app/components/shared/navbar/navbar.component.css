@@ -1,0 +1,11 @@
+#navbar {
+    /*border: 1px solid red;*/
+    font-size: 26px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#navbar i {
+    padding: 0 5px 0 5px;
+}

@@ -1,0 +1,12 @@
+.preservation-gamestable th,
+.preservation-gamestable td {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.preservation-gamestable th.expand,
+.preservation-gamestable td.expand {
+    text-align: left;
+    white-space: normal;
+    width: 90%;
+}

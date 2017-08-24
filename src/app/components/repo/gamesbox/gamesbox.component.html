@@ -1,0 +1,19 @@
+<div class="box-header">
+    <h3 class="box-title">{{ system?.name }}</h3>
+</div>
+<div class="preservation-romstable box-body">
+    <div class="table-responsive">
+        <p-dataTable [tableStyleClass]="'table table-sm no-margin'" [value]="system?.games" [rows]="rows" [paginator]="paginator" [rowsPerPageOptions]="[5,10,20, 50]">
+            <p-column header="#">
+                <ng-template let-i="rowIndex" pTemplate="body">{{ i+1 }}</ng-template>
+            </p-column>
+            <p-column field="name" header="Name"></p-column>
+            <p-column header="Size">
+                <ng-template let-game="rowData" pTemplate="body">{{ size(game.roms) | humanfilesize }}</ng-template>
+            </p-column>
+            <p-column header="Status">
+                <ng-template pTemplate="body"><span class="badge badge-success">have</span></ng-template>
+            </p-column>
+        </p-dataTable>
+    </div>
+</div>

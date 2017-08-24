@@ -1,0 +1,46 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">Played</li>
+</ol>
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Played</h3>
+    </div>
+    <div class="box-body">
+        <p-messages [(value)]="message"></p-messages>
+        <div class="table-responsive">
+            <p-dataTable #dataTable [tableStyleClass]="'table table-sm no-margin'" [value]="games"
+                         [loading]="loading" loadingIcon="fa-spinner" (onLazyLoad)="onLazyLoad($event)" [lazy]="true"
+                         [totalRecords]="count" [rows]="per_page" [paginator]="true" [rowsPerPageOptions]="[15,50,100]">
+                <p-column header="Date" field="date" [sortable]="true">
+                    <ng-template let-game="rowData" pTemplate="body">
+                        {{ game?.date }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Name" field="name" [sortable]="true">
+                    <ng-template let-game="rowData" pTemplate="body">
+                        {{ game?.name }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Platform" field="platform" [sortable]="true">
+                    <ng-template let-game="rowData" pTemplate="body">
+                        {{ game?.platform }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Score" field="score" [sortable]="true">
+                    <ng-template let-game="rowData" pTemplate="body">
+                       <span [outerHTML]="game?.score | rating"></span>
+                    </ng-template>
+                </p-column>
+                <p-column header="Status" field="status" [sortable]="true">
+                   <ng-template let-game="rowData" pTemplate="body">
+                        <span class="badge badge-success" data-toggle="tooltip" data-placement="right" *ngIf='game?.status == "Completed"'>Completed</span>
+                        <span class="badge badge-warning" attr.data-toggle="tooltip" attr.data-placement="right" *ngIf='game?.status == "Pending"'>Pending</span>
+                       <span class="badge badge-danger" attr.data-toggle="tooltip" attr.data-placement="right" *ngIf='game?.status == "Abandoned"'>Abandoned</span>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>

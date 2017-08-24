@@ -1,0 +1,43 @@
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Systems</h3>
+    </div>
+    <div class="box-body">
+        <p-messages [(value)]="message"></p-messages>
+        <div class="table-responsive">
+            <p-dataTable #dataTable [tableStyleClass]="'table table-sm no-margin'" [value]="systems"
+                         [loading]="loading" loadingIcon="fa-spinner" (onLazyLoad)="onLazyLoad($event)" [lazy]="true"
+                         [totalRecords]="count" [rows]="per_page" [paginator]="false" [rowsPerPageOptions]="[15,50,100]">
+                <p-column header="Name" styleClass="col-md-4">
+                    <ng-template let-system="rowData" pTemplate="body">
+                        {{ system?.name }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Tag" field="tag">
+                    <ng-template let-system="rowData" pTemplate="body">
+                        <span class="badge badge-default">{{ system?.tag }}</span>
+                    </ng-template>
+                </p-column>
+                <p-column header="Version" field="version">
+                    {{ system?.version }}
+                </p-column>
+                <p-column header="Dumps" field="dumps">
+                    <ng-template let-system="rowData" pTemplate="body">
+                        {{ 121.545 }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Size" field="size">
+                    <ng-template let-system="rowData" pTemplate="body">
+                        {{ 12815414545 | humanfilesize }}
+                    </ng-template>
+                </p-column>
+                <p-column header="Status" field="status">
+                    <ng-template let-system="rowData" pTemplate="body">
+                        <span class="badge badge-success" *ngIf='system?.updated'>Updated</span>
+                        <span class="badge badge-danger" *ngIf='!system?.updated'>Outdated</span>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
