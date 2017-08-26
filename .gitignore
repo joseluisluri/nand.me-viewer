@@ -48,7 +48,6 @@ src/app/**/*.js.map
 dist
 dev
 docs
-lib
 test
 tmp
 
