@@ -10,6 +10,6 @@ before_script:
   - npm install -g
 script:
   - chmod +x ./node_modules/.bin/tsc
-  - ./node_modules/.bin/tsc -p src
+  - tsc -p src
 # npm run test
  
