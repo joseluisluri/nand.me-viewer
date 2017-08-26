@@ -1,0 +1,14 @@
+cache:
+  directories:
+    - node_modules
+# use the ravis docker build system which is faster
+sudo: false
+language: node_js
+node_js:
+  - "stable"
+before_script:
+  - npm install -g
+script:
+  - tsc -p src
+# npm run test
+ 
