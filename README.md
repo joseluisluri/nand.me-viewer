@@ -1,30 +1,33 @@
+# nand.me-viewer - HTML5/AngularJS Frontend
 [![Build Status](https://travis-ci.org/joseluisluri/nand.me-viewer.svg?branch=master)](https://travis-ci.org/joseluisluri/nand.me-viewer)
+[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=nand.me-viewer&blinking=true)](https://sonarcloud.io/dashboard?id=nand.me-viewer)
 
-# Viewer
+> I hack you with love
 
-### Usage
-First time:
+## Installation
 
+Get the latest version and run the following commands:
 ```
-$ npm install typescript -g
+$ git clone https://github.com/joseluisluri/nand.me-viewer.git
+$ cd nand.me-viewer
+$ npm install -g
 $ tsc -p src
-
 ```
 
-Start
+For development, you can use the integrated lite-server:
+
 ```
 $ npm start
 ```
 
-## Settings
 
-- src/app/appsettings.ts (git ignored)
+## Sonar 
+[![Bugs](https://sonarcloud.io/api/badges/measure?key=nand.me-viewer&blinking=true&metric=bugs)](https://sonarcloud.io/project/issues?id=nand.me-viewer&resolved=false&types=BUG)
+[![Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=nand.me-viewer&blinking=true&metric=vulnerabilities)](https://sonarcloud.io/project/issues?id=nand.me-viewer&resolved=false&types=VULNERABILITY)
+[![Coverage](https://sonarcloud.io/api/badges/measure?key=nand.me-viewer&blinking=true&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=nand.me-viewer)
+[![Code Smells](https://sonarcloud.io/api/badges/measure?key=nand.me-viewer&blinking=true&metric=code_smells)](https://sonarcloud.io/project/issues?id=nand.me-viewer&resolved=false&types=CODE_SMELL)
+[![Duplicated Blocks](https://sonarcloud.io/api/badges/measure?key=nand.me-viewer&blinking=true&metric=duplicated_blocks)](https://sonarcloud.io/component_measures/metric/duplicated_blocks/list?id=nand.me-viewer)
 
-## Sonar
 
-1. Install [SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
- 
-2. Run this in src folder:
- ```$xslt
-$ sonar-scanner.bat -Dsonar.projectKey=_nand.me-viewer_ -Dsonar.organization=joseluisluri-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6d426b8ca7c93c43625419a3852393bd6a4fd4a5
-```
+
+
