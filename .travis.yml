@@ -12,7 +12,7 @@ addons:
   sonarcloud:
     organization: joseluisluri-github
     token:
-      secure: SONAR_TOKEN
+      secure: Df7thGLcDVE+9+J+q5nxedsqQp2+sbX00gtSY1xKt1SGrrHmfi0/OeltsKz+mvojqFskZEcQQIzkGkVB4K2fXLd9e6ddq6HTX/Ye71KLuMtesmLLdaDhoGM4/tcQ9Bu8n/64P3erBtAvI2slih/khIVglG9Q27oJO4BidFAneQXfF7WpYSiYb4CRT4SiWtc4UuQfOUg2VArJvgN5viWZzmY+PA/5XyZj8E0cPkJHF4JW8cNfO8hUQNMbvLw/PsaXtVm1bnE2TRkpJOCLrVCkYMzzKIxoKS/geh2eGegce5hQl/U4F/YGfSjeJy6Cx0CwW8Cm51DMUhz8UNwatYx00NxG61mKeDc7XLDCoOtQtom0IoxaOTIwz++ecTpa92d9y7fdfQULn9mLPno4rb1x6vJFv3lRyUpfDF8b7B0DNvbyBLVfeisnRUQoXsUXSDKpwuChCH2WAQ1AlhEoyyKXzIynO8+QMT/8IfyscpQtKbEEbCcdLE5ZFeWcocboyohuFZVlgbpSKAEvh3ZXie5K05A5xfk1a56LWOobwG7E+AzmcJcQiaGHOIu/3CiViOjPiuiRcrSGfgubADxk6ZL2r6QFHb+Gc07dkth38zpSoAY/DfIUD06I9mwv1Ab77YP/ctF8N0K+PCFshf8IEQC4QFfFfS0LbxQmugX9sAtV/B0=
 script:
   - chmod +x ./node_modules/.bin/tsc
   - tsc -p src
