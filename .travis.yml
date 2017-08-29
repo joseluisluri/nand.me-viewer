@@ -10,7 +10,7 @@ before_script:
   - npm install -g
 addons:
   sonarcloud:
-    organization: com.github.joseluisluri
+    organization: joseluisluri-github
     token:
       secure: $SONAR_TOKEN
 script:
