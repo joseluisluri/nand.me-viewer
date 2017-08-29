@@ -8,8 +8,14 @@ node_js:
   - "6.11.0"
 before_script:
   - npm install -g
+addons:
+  sonarcloud:
+    organization: joseluisluri-github
+    token:
+      secure: SONAR_TOKEN
 script:
   - chmod +x ./node_modules/.bin/tsc
   - tsc -p src
+  - sonar-scanner
 # npm run test
  
